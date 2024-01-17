@@ -1,0 +1,64 @@
+body {
+  background-image: url("../Images/team_bckgrd.jpg");
+  overflow: hidden;
+}
+
+.team-title {
+  font-family: "Comic Sans", cursive;
+  font-style: italic;
+  font-weight: bold;
+  margin-top: -15px;
+  font-size: 3em;
+  color: rgb(0, 255, 255);
+}
+
+.meet-the-team {
+  margin: 30px auto;
+  text-align: center;
+}
+
+@keyframes slidein {
+  from {
+    margin-top: 100%;
+  }
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin: 25px 15%;
+  animation-duration: 0.5s;
+  animation-name: slidein;
+}
+
+.team-member {
+  background-color: rgb(190, 190, 190);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border-color: rgb(234, 255, 127);
+  border-style: solid;
+  margin-bottom: 15px;
+  line-height: 150px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.team-member h4 {
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+.team-member p {
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
