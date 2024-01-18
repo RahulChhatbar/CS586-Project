@@ -1,5 +1,4 @@
 body {
-  overflow: hidden;
   background-image: url("../Images/team_bckgrd.jpg");
 }
 
@@ -12,6 +11,7 @@ body {
 }
 
 .meet-the-team {
+  margin: 30px auto;
   text-align: center;
 }
 
