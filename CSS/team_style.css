@@ -1,6 +1,5 @@
 body {
   overflow: hidden;
-  background-image: url("../Images/team_bckgrd.jpg");
 }
 
 .team-title {
@@ -9,6 +8,11 @@ body {
   font-weight: bold;
   font-size: 4em;
   color: cyan;
+  /* text-shadow: 0 0 5px #FFF, 0 0 5px #FFF, 0 0 5px #FFF, 0 0 5px orange, 0 0 5px orange, 0 0 5px orange, 0 0 5px orange, 0 0 5px orange; */
+  /* text-shadow: 0 1px 0px #378ab4, 1px 0 0px #5dabcd, 1px 2px 1px #378ab4, 2px 1px 1px #5dabcd, 2px 3px 2px #378ab4, 3px 2px 2px #5dabcd, 3px 4px 2px #378ab4, 4px 3px 3px #5dabcd, 4px 5px 3px #378ab4, 5px 4px 2px #5dabcd, 5px 6px 2px #378ab4, 6px 5px 2px #5dabcd, 6px 7px 1px #378ab4, 7px 6px 1px #5dabcd, 7px 8px 0px #378ab4, 8px 7px 0px #5dabcd; */
+  text-shadow: -5px 5px 0px #000000, -10px 10px 0px #000000, -15px 15px 0px #000000;
+  /* text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15); */
+  font-variant: small-caps;
 }
 
 .meet-the-team {
@@ -22,8 +26,6 @@ body {
 }
 
 .team-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
   gap: 25px;
   margin: 5%;
   animation-duration: 0.5s;
@@ -75,4 +77,24 @@ body {
   width: 30px;
   height: 30px;
   cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }  
+}
+
+@media screen and (max-width: 767px) {
+  .team-grid {
+    display: none;
+  }
 }
