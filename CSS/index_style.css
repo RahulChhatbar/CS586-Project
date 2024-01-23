@@ -75,7 +75,6 @@ body {
 }
 
 .search-click:focus {
-  width: 400px;
   padding: 0px 25px;
   background-image: none;
 }
@@ -90,4 +89,16 @@ body {
 
 .search-click:not(:focus) {
   color: transparent;
+}
+
+@media screen and (min-width: 1024px) {
+  .search-click:focus {
+    width: 25%;
+  } 
+}
+
+@media screen and (max-width: 1023px) {
+  .search-click:focus {
+    width: 75%;
+  } 
 }
