@@ -5,16 +5,13 @@ body {
   background-image:  linear-gradient(30deg, #e78919 12%, transparent 12.5%, transparent 87%, #e78919 87.5%, #e78919), linear-gradient(150deg, #e78919 12%, transparent 12.5%, transparent 87%, #e78919 87.5%, #e78919), linear-gradient(30deg, #e78919 12%, transparent 12.5%, transparent 87%, #e78919 87.5%, #e78919), linear-gradient(150deg, #e78919 12%, transparent 12.5%, transparent 87%, #e78919 87.5%, #e78919), linear-gradient(60deg, #e7891977 25%, transparent 25.5%, transparent 75%, #e7891977 75%, #e7891977), linear-gradient(60deg, #e7891977 25%, transparent 25.5%, transparent 75%, #e7891977 75%, #e7891977);
   background-size: 30px 53px;
   background-position: 0 0, 0 0, 15px 26px, 15px 26px, 0 0, 15px 26px; */
-  --s: 200px;
-  --c: #0a6a40;
-  --_g: #0000 52%,var(--c) 54% 57%,#0000 59%;
   background: 
-   radial-gradient(farthest-side at -33.33% 50%,var(--_g)) 0 calc(var(--s)/2),
-   radial-gradient(farthest-side at 50% 133.33%,var(--_g)) calc(var(--s)/2) 0,
-   radial-gradient(farthest-side at 133.33% 50%,var(--_g)),
-   radial-gradient(farthest-side at 50% -33.33%,var(--_g)),
-   #67917A;
-  background-size: calc(var(--s)/4.667) var(--s),var(--s) calc(var(--s)/4.667);
+    radial-gradient(farthest-side at -33.33% 50%, #0000 52%, rgba(10, 106, 64, 1) 54% 57%, #0000 59%),
+    radial-gradient(farthest-side at 50% 133.33%, #0000 52%, rgba(10, 106, 64, 1) 54% 57%, #0000 59%),
+    radial-gradient(farthest-side at 133.33% 50%, #0000 52%, rgba(10, 106, 64, 1) 54% 57%, #0000 59%) 0 100px,
+    radial-gradient(farthest-side at 50% -33.33%, #0000 52%, rgba(10, 106, 64, 1) 54% 57%, #0000 59%) 100px 0,
+    rgba(103, 145, 122, 1);
+  background-size: calc(200px * 3/14) 200px, 200px calc(200px * 3/14);
 }
 
 .sidenav {
@@ -26,7 +23,7 @@ body {
   left: 0;
   background-color: #111;
   overflow-x: hidden;
-  padding-top: 60px;
+  padding-top: 75px;
   transition: 0.5s;
 }
 
@@ -34,27 +31,20 @@ body {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  font-family: Gotham;  
   color: #818181;
   display: block;
   transition: 0.3s;
 }
 
-.sidenav a:hover, .offcanvas a:focus {
+.sidenav a:hover, .sidenav a:focus {
   color: #fff;
 }
 
 .sidenav .closebtn {
   position: absolute;
   top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-#main {
-  transition: margin-left .5s;
-  padding: 20px;
+  right: 10px;
+  font-size: 50px;
 }
 
 .navbar-icon {
@@ -62,7 +52,42 @@ body {
   width: 40px;
   margin: 20px;
   cursor: pointer;
-  display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.search-click {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  border: 2px solid black;
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
+  font-size: 25px;
+  font-weight: bolder;
+  background-color: orange;
+  background-image: url("https://img.icons8.com/?size=80&id=111487&format=png");
+  background-size: 70% 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.5s;
+}
+
+.search-click:focus {
+  width: 400px;
+  padding: 0px 25px;
+  background-image: none;
+}
+
+.search-click:not(:focus)::placeholder {
+  color: transparent;
+}
+
+.search-click:focus::placeholder {
+  color: #3c3c3c;
+}
+
+.search-click:not(:focus) {
+  color: transparent;
 }
